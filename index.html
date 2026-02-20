@@ -1,78 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>SITIO DE CAFE</title>
-</head>
-<body>
- <!--Aqui irá el heade y el main-->
-    <header>
-        <nav class="navbar">
-            <!--logo-->
-            <a href="#" class="nav-logo">
-                <h2 class="nav-text">☕coffee</h2>
-            </a>
-            <!--checkbox invisible: controla el menú movil-->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <!--menú de navegación-->
-            <ul class="nav-menú">
-                <li class="nav-item">
-                    <a href="./index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./menu.html" class="nav-link">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./Galeria.html" class="nav-link">Galeria</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./contactenos.html" class="nav-link">Contactenos</a>
-                </li>
-            </ul>
-            <!--Acciones: icono usuario + botón hamburguesas-->
-            <div class="nav-actions">
-                <a href="./login.html" class="nav-login" title="iniciar sesion">
-                    <i class="fa-regular fa-user"></i>
-                </a>
-                <!--label vinculado al checkbox: actúa omo boton hamburguesa-->
-                <label for="menu-toggle" class="hamburguer">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero-section">
-            <div class="section-content">
-              <!--columna izquierda: texto--->
-              <div class="hero-details">
-                <h2 class="title">El mejor café</h2>
-                <h3 class="subtitle">
-                    Haz tu día genial con nuestro especial Coffee
-                </h3>
-                <p class="description">
-                    Bienvenido a nuestro paraíso del café, donde cada
-                    grano cuenta una historia y cada taza despierta alegría
-                </p>
-                <div class="buttons">
-                    <a href="#" class="button order-now">Ordenar Ahora</a>
-                    <a href="#" class="button contact-us">contactenos</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/index.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+         <title> Coffee </title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <!--  LOGOOOO -->
+                  <a href="#" class="nav-logo">
+                    <h2 class="nav-text"> ☕ Coffee </h2>
+                  </a>
+                  <!-- chek box  invisible esto controla el menu movil -->
+                   <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                   <!-- menu de navegacion toda la parte de arriva  el menu de arriva-->
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link"> Home </a>                           
+                        </li>
+                        <li class="nav-item">
+                            <a href="./menu.html" class="nav-link" target="_blak"> Menu </a>                           
+                        </li>
+                        <li class="nav-item">
+                            <a href="./galeria.html" class="nav-link" target="_blak"> Galeria </a>                           
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contactenos.html" class="nav-link" target="_blak"> Contactenos </a>                           
+                        </li>
+                    </ul>
+                    <!-- accones del icono de suario y del boton de hamburguesa -->
+                     <div class="nav-actions">
+                        <a href="./login.html" class="nav-login" title="iniciar sesion">
+                            <i class="fa-regular fa-user"></i> 
+                        </a>
+                        <!-- este actua como el boton de hamburguesa -->
+                         <label for="menu-toggle" class="hamburguer">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                         </label>
+                     </div>
+            </nav>
+        </header>
+        <!-- HEROOOO -->
+        <main>
+            <section class="hero-section">
+                <div class="section-content">
+                    <!-- esto es lo que controla el texto a la isquierda -->
+                     <div class="hero-details">
+                        <h2 class="title"> El mejor cafe </h2>
+                        <h3 class="subtitle"> Haz tu dia genial con nuestro especial coffee </h3>
+                        <p class="description">
+                            Bienvenido a nuesro paraiso del cafe donde cada grano 
+                            cuenta una historia cada taza despierta una alegria 
+                        </p>
+                        <div class="buttons">
+                            <a href="#" class="button order-now btn--stripe"> Ordenar ahora </a>
+                            <a href="#" class="button order-now btn--stripe"> Contactenos </a>
+                        </div>
+                     </div>
+                     <!-- esta parte es la que controla la imagen a la derecha -->
+                      <div class="hero-image-wrapper">
+                        <img src="img/coffee-hero-section.png"
+                        alt="hero"
+                        class="hero-image">
+                      </div>
                 </div>
-              </div> 
-              <!--Columna derecha: imagen--> 
-              <div class="hero-image">
-                <img src="./img/coffee-hero-section.png" 
-                alt="hero"
-                class="hero-image">           
-              </div>
-
-            </div>
-        </section>
-    </main>
-</body>
+            </section>
+        </main>
+    </body>
 </html>

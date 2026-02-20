@@ -28,23 +28,12 @@ header .navbar{
     color: white;
 }
 
-.navbar .nav-menú {
+.navbar .nav-menu {
     display: flex;
     gap: 10px;
 }
 
-.navbar.nav-menú .nav-link {
-    padding: 10px 18px;
-    color: white;
-    font-size: large;
-    border-radius: 20px;
-    transition: 0.3s ease;
-}
 
-.navbar .nav-menú .nav-link:hover {
-    color: #3b141c;
-    background-color: #e2750f;
-}
 
 .nav-actions {
     display: flex;
@@ -123,13 +112,12 @@ header .navbar{
 .hero-section .hero-details .title {
     color: #e2750f;
     font-size: 2.3rem;
-    font-family: "Miniver", sans-serif;
 }
 
 .hero-section .hero-details .subtitle {
     margin-top: 8px;
     font-size: 2.3rem;
-    max-width: 70%;
+    max-width: 100%;
 }
 
 .hero-section .hero-details .description {
@@ -138,14 +126,15 @@ header .navbar{
     margin: 24px 0 40px;
 }
 
-.hero-section .hero-details .buttons {
-    padding: 10px 26px;
+.hero-section .hero-details .button {
+    padding: 10px 20px;
     background-color: #e2750f;
     color: #3b141c;
     border-radius: 20px;
     border: 2px solid transparent;
     transition: 0.3s ease;
     font-weight: 600;
+    font-size: 1rem; 
 }
 
 .hero-section .hero-details .buttons {
@@ -153,13 +142,16 @@ header .navbar{
     gap: 23px;
 }
 
-.hero-section .hero-details .buttons:hover {
+.hero-section .hero-details .button:hover {
     color: white;
 }
 
 .hero-section .hero-image-wrapper {
-    max-width: 500px;
-    margin-right: 30px;
+    max-width: 800px;  
+    margin-right: 130px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .nav-link {
@@ -169,10 +161,7 @@ header .navbar{
     transition: 0.3s ease;
 }
 
-.nav-link:hover {
-    color:#3b141c;
-    background-color: #e2750f;
-}
+
 
 .hamburguer {
     display: none;
@@ -185,11 +174,17 @@ header .navbar{
 
 @media (max-width: 768px) {
 
+    header .navbar {
+        padding: 14px 20px;
+        position: relative;
+        flex-wrap: wrap;   
+    }
+
     .hamburguer {
         display: flex;
     }
 
-    .nabar .nav-menu {
+    .navbar .nav-menu {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -200,9 +195,253 @@ header .navbar{
     }
 
     .hero-section .section-content {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 100px 24px 60px;
+        display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;        
     }
 
+    /* Menú cerrado por defecto */
+    .navbar .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #3b141c;
+        padding: 10px 0;
+        order: 3;
+    }
+
+    .hero-section .section-content {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;  
+  padding: 100px 24px 60px;
+}
+
+.hero-section .hero-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;   
+  max-width: 90%;       
+}
+
+
+    .hero-section .hero-details .title { 
+  font-size: 2rem; 
+  text-align: center;
+  align-items: center;
+   font-family: "Playfair Display", sans-serif;
+}
+
+.hero-section .hero-details .subtitle { 
+  font-size: 1.6rem; 
+  max-width: 100%; 
+  text-align: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.hero-section .hero-details .description { 
+  font-size: 1rem; 
+  max-width: 100%; 
+  text-align: center;
+  align-items: center;
+  font-family: "Lora", sans-serif;
+}
+
+.hero-section .hero-details .buttons { 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  align-items: center;
+}
+
+}
+
+@media (max-width: 1024px) {
+    .hero-section .section-content { padding: 100px 40px 60px; gap: 30px; }
+    .hero-section .hero-details .subtitle { font-size: 1.9rem; max-width: 90%; }
+    .hero-section .hero-details .description { max-width: 90%; }
+    .hero-section .hero-image-wrapper { max-width: 800px; margin-right: 0; }
+}
+
+/* Abrir menú cuando el checkbox está marcado */
+.menu-toggle:checked + .nav-menu {
+    display: flex;
+}
+
+.navbar .nav-menu .nav-link {
+    border-radius: 0;
+    padding: 14px 24px;
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+}
+
+/* Hero */
+@media (min-width: 769px) {
+.hero-section .section-content {
+    gap: 30px;
+}
+
+
+.hero-section .hero-details .title { 
+  font-size: 3.5rem; 
+  text-align: left;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.hero-section .hero-details .subtitle { 
+  font-size: 2.5rem; 
+  max-width: 100%; 
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+.hero-section .hero-details .description { 
+  font-size: 1.5rem; 
+  max-width: 100%; 
+  text-align: left;
+  font-family: "Lora", sans-serif;
+}
+
+.hero-section .hero-details .buttons { 
+  justify-content: left; 
+  flex-wrap: wrap; 
+}
+
+}
+
+@media (max-width: 480px) {
+  .hero-section .hero-details .title { 
+    font-size: 1.7rem; 
+  }
+
+  .hero-section .hero-details .subtitle { 
+    font-size: 1.3rem; 
+  }
+
+  .hero-section .hero-details .description { 
+    font-size: 0.95rem; 
+    margin: 18px 0 30px; 
+  }
+
+  .hero-section .hero-details .button { 
+    padding: 10px 20px; 
+    font-size: 0.95rem; 
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .hero-section .hero-details .buttons { 
+    flex-direction: column; 
+    gap: 14px; 
+    width: 100%; 
+  }
+
+}
+@media (max-width: 1200px) {
+    .hero-section .hero-image-wrapper {
+    max-width: 400px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+/* ===== EFECTO HOVER ANIMADO PARA NAV ===== */
+
+.navbar .nav-menu .nav-link {
+  position: relative;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border-radius: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+/* Línea animada desde abajo */
+.navbar .nav-menu .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e2750f;
+  transition: all 0.4s ease;
+}
+
+/* Al pasar el mouse */
+.navbar .nav-menu .nav-link:hover {
+  color: #e2750f;
+}
+
+.navbar .nav-menu .nav-link:hover::after {
+  width: 100%;
+}
+
+/* === EFECTO DE RAYAS PARA LOS BOTONES === */
+
+@keyframes stripe-slide {
+  0% { background-position: 0% 0; }
+  100% { background-position: 100% 0; }
+}
+
+.hero-section .button {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  font-size: 1rem;
+  background-color: #e2750f;
+  color: #3b141c;
+  border: 2px solid #3b141c;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.hero-section .button::after {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #3b141c,
+    #3b141c 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+  border-top: 1px solid #3b141c;
+  transition: all 0.4s ease;
+}
+
+.hero-section .button:hover {
+  background-color: #3b141c;
+  color: #fff;
+  border-color: #000;
+}
+
+.hero-section .button:hover::after {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  border-top: 1px solid #000;
+  animation: stripe-slide 12s infinite linear forwards;
 }
