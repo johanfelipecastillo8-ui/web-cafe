@@ -1,213 +1,60 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
 }
 
-body{
-    background:#3b141c;
-    padding:40px 20px;
-}
+button { cursor: pointer; border: none; background: none; }
+img { width: 100%; }  
+ul { list-style: none; }
+a { text-decoration: none; }
 
-/* TITULO */
-eader {
+header {
     position: fixed;
     width: 100%;
     z-index: 5;
     background-color: #3b141c;
 }
-.header{
-    text-align:center;
-    margin-bottom:30px;
-    color: white
+
+header .navbar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header h1{
-    font-size:28px;
-    font-weight:700;
+.navbar .nav-logo .nav-text {
+    color: rgb(255, 255, 255);
 }
 
-.header i{
-    color:#ff9811;
-    margin-right:8px;
-}
-
-.header p{
-    color:#ffffff;
-    font-size:14px;
-    margin-top:5px;
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
 }
 
 
-/* CONTENEDOR PRINCIPAL */
-.container{
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    gap:30px;
-    align-items:flex-start;
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-/* CARRITO VACIO */
-.cart-empty{
-    flex:2;
-    background:linear-gradient(135deg,#000000,#737174);
-    border-radius:15px;
-    padding:60px 30px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.nav-login {
+    color: white;
+    font-size: 1.4rem;
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
 }
 
-.cart-empty i{
-    font-size:60px;
-    color:#0c0c0c;
-    margin-bottom:20px;
-}
-
-.cart-empty h2{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.cart-empty p{
-    color:#ffffff;
-    font-size:14px;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    border-radius:10px;
-    background:linear-gradient(135deg,#ff8b06,#fffc2f);
-    color:rgb(0, 0, 0);
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* RESUMEN */
-.summary{
-    flex:1;
-    background:linear-gradient(135deg,#3c3d42,#88858b);
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.summary h3{
-    margin-bottom:15px;
-    font-size:18px;
-}
-
-.summary .line{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:8px;
-    font-size:14px;
-}
-
-.summary .total{
-    background:rgba(124,58,237,0.1);
-    padding:8px;
-    border-radius:8px;
-    font-weight:600;
-}
-
-hr{
-    margin:15px 0;
-    border:none;
-    border-top:1px solid #ddd;
-}
-
-/* INPUTS */
-.form-group{
-    margin-bottom:12px;
-}
-
-label{
-    font-size:13px;
-    display:block;
-    margin-bottom:4px;
-}
-
-input, select{
-    width:100%;
-    padding:10px;
-    border-radius:8px;
-    border:1px solid #000000;
-    font-size:13px;
-    outline:none;
-}
-
-input:focus, select:focus{
-    border-color:#7c3aed;
-}
-
-.row{
-    display:flex;
-    gap:10px;
-}
-
-.row .form-group{
-    flex:1;
-}
-
-.checkout{
-    margin-top:15px;
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:10px;
-    background:linear-gradient(135deg,#ff9100,#ffe817);
-    color:rgb(0, 0, 0);
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.checkout:hover{
-    transform:translateY(-2px);
-}
-
-.features{
-    margin-top:15px;
-    font-size:12px;
-    color:#555;
-}
-
-.features p{
-    margin-bottom:5px;
-}
-
-.features i{
-    color:rgb(212, 224, 31);
-    margin-right:5px;
-}
-
-/* RESPONSIVE */
-@media (max-width:900px){
-    .container{
-        flex-direction:column;
-    }
-
-    .cart-empty{
-        padding:40px 20px;
-    }
-}
-
-@media (max-width:500px){
-    .row{
-        flex-direction:column;
-    }
-
-    .header h1{
-        font-size:22px;
-    }
+.nav-login:hover {
+    color: #000000;
+    background-color: #e2750f;
+    border-color: #e2750f;
 }
