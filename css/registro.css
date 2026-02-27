@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #3b141c;
+}
+
+.card{
+    width:600px;
+    background:linear-gradient(135deg,#000000,#575757);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    background:linear-gradient(135deg,#ff6a06,#f5d443);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:rgb(0, 0, 0);
+    font-size:22px;
+    margin:0 auto 15px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:5px;
+    color: white;
+}
+
+.subtitulo{
+    text-align:center;
+    font-size:14px;
+    color:#8f8d8d;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    font-size:14px;
+    display:block;
+    margin-bottom:5px;
+    color: white;
+}
+
+.input-container{
+    position:relative;
+}
+
+.input-container i{
+    position:absolute;
+    left:10px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#666;
+    font-size:14px;
+}
+
+input{
+    width:100%;
+    padding:10px 10px 10px 35px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+    font-size:14px;
+}
+
+input:focus{
+    border-color:#999999;
+}
+
+.row{
+    display:flex;
+    gap:10px;
+    color: white;
+}
+
+.row .form-group{
+    flex:1;
+    color: white;
+}
+
+.small-text{
+    font-size:12px;
+    color:#ffffff;
+    margin-top:3px;
+}
+
+.checkbox{
+    display:flex;
+    align-items:center;
+    font-size:13px;
+    margin:15px 0;
+}
+
+.checkbox input{
+    width:auto;
+    margin-right:8px;
+}
+
+.checkbox a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#ff6600,#faba30);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.login{
+    text-align:center;
+    font-size:13px;
+    margin-top:15px;
+}
+
+.login a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
+@media (max-width: 1024px) {
+    .imagenes {
+        grid-template-columns: repeat(2, 1rf);
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+   body {
+    display:flex;
+    justify-content: center;
+    align-items: center; }
+
+.card{
+    width: 85%;
+    padding: 20px;
+}
+h1 {
+    font-size: 22px;
+}
+p { font-size: 14px;}
+}
+
+@media (max-width: 480px) {
+  .card{
+    width: 85%;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
